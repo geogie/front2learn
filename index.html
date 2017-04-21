@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>仿Facebook网格图片画廊jquery插件|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<!-- 灰色背景 -->
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+	<!-- 图片排列样式 -->
+	<link rel="stylesheet" href="css/images-grid.css">
+</head>
+<body>
+  <div class="htmleaf-container">
+		<!-- 字体居中 -->
+		<header class="htmleaf-header">
+			<h1>仿Facebook网格图片画廊jquery插件 <span>A images grid jQuery plugin</span></h1>
+		</header>
+		<!-- 容器画廊显示图片 -->
+		<div class="container">
+			<div id="gallery"></div>
+		</div>
+	</div>
+
+	<!-- 显示图片 -->
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script src="js/images-grid.js"></script>
+	<script>
+            $('#gallery').imagesGrid({
+                images: [
+                    { src: 'imgs/1.jpg', thumbnail: 'imgs/1-thumbnail.jpg' },
+                    { src: 'imgs/2.jpg', alt: 'Nature', title: 'Nature' },
+                    'imgs/3.jpg',
+										// 看大图标题：The long way
+                    { src: 'imgs/4.jpg', caption: 'The long way' },
+                    'imgs/5.jpg',
+                    'imgs/6.jpg',
+                    'imgs/7.jpg'
+                ],
+                align: true
+            });
+        </script>
+</body>
+</html>
