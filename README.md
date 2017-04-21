@@ -2,9 +2,8 @@
 practice
 
 ## 仿Facebook网格图片画廊jquery插件 ##
- 1. 测试入口index.
-    最多显示5张，多于5张会在最后一张显示总张数。
-    点击每一张看大图。
+ 1. 测试入口index.html  
+    最多显示5张，多于5张会在最后一张显示总张数,点击每一张看大图
  2. css文件下：  
     htmlleaf-demo.css:灰色背景  
     images-grd.css:图片排列样式  
