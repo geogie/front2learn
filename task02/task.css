@@ -1,0 +1,152 @@
+/*table字体大小，字体*/
+* {
+  box-sizing: border-box;;
+  margin: 0;
+  padding: 0;
+  font-family: '黑体';
+  font-size: 15px;
+}
+/*table宽度，背景颜色，阴影*/
+.container{
+  width: 75%;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #fefefe;
+  box-shadow: 0 0 16px rgba(84,84,84,0.5);
+}
+/*底部导航数字条的外边距*/
+[class*='effect-']{
+  margin: 20px auto;
+}
+/*table居中*/
+table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 50%;
+  margin: auto;
+}
+/*单元格*/
+table, th, td {
+  border: 2px solid white;
+}
+/*第1排内容单元格文字红色*/
+tbody tr:nth-child(1) td {
+  color: red;
+}
+/*第2排内容单元格文字红色*/
+tbody tr:nth-child(2) td {
+  color: red;
+}
+/*第3排内容单元格文字红色*/
+tbody tr:nth-child(3) td {
+  color: red;
+}
+/*偶数排背景色*/
+tbody tr:nth-child(even) td {
+  background-color: #cccccc;
+}
+/*table 头文字白色，背景黑色*/
+th {
+  background-color: #000;
+  color: white;
+}
+/*搜索框 圆角、居中、过度动画时间*/
+input.search {
+  transition: all 0.3s;
+  display: block;
+  border: 1px solid #6d6d6d;
+  border-radius: 5px;
+  width: 200px;
+  height: 30px;
+  margin: auto;
+  text-align: center;
+}
+/*搜索框获取焦点时候的状态 颜色*/
+input.search:focus {
+  width: 500px;
+  margin: auto;
+  border: 1px solid rgba(3,169,244,.8);
+  box-shadow: 0 0 10px rgba(3,169,244,.5);
+}
+/*导航数字 居中 大小 颜色*/
+.banner {
+  border: 1px solid #6e6e6e;
+  width: 402px;
+  height: 202px;
+  margin: auto;
+  position: relative;
+}
+/*内容区域*/
+.content {
+  overflow: hidden;
+  width: 400px;
+  height: 200px;
+  position: relative;
+}
+
+.item {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.item.not(:target) {
+  animation: slideOutLeft 0.5s forwards;
+}
+
+.item.target {
+  animation: slideInRight 0.5s forwards;
+}
+
+@@keyframes slideInRight {
+  from {
+    left: 400px;
+    top: 0;
+  }
+  to {
+    left: 0;
+    top: 0;
+  }
+}
+
+@@keyframes slideOutLeft {
+  from {
+    left: 0;
+    top: 0;
+  }
+  to {
+    left: -400px;
+    top: 0;
+  }
+}
+
+#i1 {
+  background-color: rebeccapurple;
+}
+
+#i2 {
+  background-color: aquamarine;
+}
+
+#i3 {
+  background-color: khaki;
+}
+/*数字按钮靠右边*/
+.banner-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/*数字按钮 单个 矩形box 背景灰色 字体白色*/
+.banner-btn a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  opacity: 0.6;
+}
