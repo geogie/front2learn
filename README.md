@@ -7,10 +7,11 @@ practice
  2. css文件下：  
     htmlleaf-demo.css:灰色背景  
     images-grd.css:图片排列样式  
+    css/img文件下：  
+    imgs-grid-icons.png：看大图时的左右箭头、叉图标  
     imgs文件下：  
     [1,7].jpg：画廊图片  
     1-thumbnail.jpg：小图，点击小图显示大图1.jpg  
-    imgs-grid-icons.png：看大图时的左右箭头、叉图标  
     js文件下：  
     images-grid.js：画廊图片显示  
     jquery-1.11.0.min.js：画廊图片显示
