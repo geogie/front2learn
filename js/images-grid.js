@@ -1,6 +1,5 @@
 
 (function($) {
-
     /**
      * Plugin
      */
