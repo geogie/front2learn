@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>正则表达式</title>
+  </head>
+  <body>
+    <script>
+      var phone = /^(13[0-9]|15[0|1|3|6|7|8|9]|18[8|9])\d{8}$/;
+      // 匹配以[a-zA-Z]+连续开始和结束的
+      var duplication = /(\b[a-zA-Z]+\b)\s+\1/;
+
+      console.log(phone.test(18812011232));// true
+      console.log(phone.test("18812312"));
+      console.log(phone.test("12345678909"));
+      console.log(duplication.test("foo foo bar"));// true
+      console.log(duplication.test("bar foo bar"));
+      console.log(duplication.test("foo  barbar bar"));
+    </script>
+  </body>
+
+</html>
