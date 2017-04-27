@@ -2,6 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
+  // 把./src/main.js输出为./dist/build.js
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -9,34 +10,33 @@ module.exports = {
     filename: 'build.js'
   },
   module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
+    rules: [{
+      test: /\.vue$/,
+      loader: 'vue-loader',
+      options: {
           // vue-loader options go here
-        }
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      },
-      {
-        test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
-        loader: 'file-loader'
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
-        loader: 'file-loader',
-        query: {
-          name: '[name].[ext]?[hash]'
-        }
       }
+    },
+    {
+      test: /\.js$/,
+      loader: 'babel-loader',
+      exclude: /node_modules/
+    },
+    {
+      test: /\.css$/,
+      loader: 'style-loader!css-loader'
+    },
+    {
+      test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+      loader: 'file-loader'
+    },
+    {
+      test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
+      loader: 'file-loader',
+      query: {
+        name: '[name].[ext]?[hash]'
+      }
+    }
     ]
   },
   resolve: {
@@ -46,11 +46,11 @@ module.exports = {
     }
   },
   plugins: [
-      new webpack.ProvidePlugin({
-          $: "jquery",
-          jQuery: "jquery"
-      })
-   ],
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
+  ],
   devServer: {
     historyApiFallback: true,
     noInfo: true
