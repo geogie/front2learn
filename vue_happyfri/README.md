@@ -37,7 +37,18 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
    /.babelrc：转码规则和插件，熟悉Linux的同学一定知道，rc结尾的文件通常代表运行时自动加载的文件
    presets：这个是babel6新加的，就是代表需要启动什么样的预设转码，一种简单的使用方式  
    比较重要的部分：  
-   /index.html：header一些手机兼容性配置、标题，body路由view的id  
-   /src/main.js：挂在路由，文件引用
+   /index.html：header一些手机兼容性配置、标题，body路由view的id,主页 我们默认访问indexid=“app”和App.vue组件里的容器完美重合，也就是把组件挂载到index页面，然后我们取建设其他组件就好了。  
+
+   /src/main.js：挂在路由，文件引用,入口文件，引入一些插件或静态资源，引入之前线安装该插件，在package.json文件中有记录  
+
+   /build/webpack.base.config.js:  
+   设置了文件的入口main.js   
+
+   ／src/App.vue：标准的vue组件，包含三部分：模版、script、样式
+
+   package.json文件中字段解释：  
+   scripts：编译项目的一些命令   
+   dependencies：项目发布时候的依赖  
+   devDependencies：项目开发时候的依赖
 3. 参考：  
     [https://github.com/bailicangdu/vue2-happyfri](https://github.com/bailicangdu/vue2-happyfri)
