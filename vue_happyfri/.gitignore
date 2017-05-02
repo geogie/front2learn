@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+happyfri/
+dist/
+npm-debug.log

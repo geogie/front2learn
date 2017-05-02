@@ -1,0 +1,8 @@
+/*转码规则和插件，熟悉Linux的同学一定知道，rc结尾的文件通常代表运行时自动加载的文件
+presets：这个是babel6新加的，就是代表需要启动什么样的预设转码
+一种简单的使用方式*/
+{
+  "presets": ["es2015", "stage-2"],
+  "plugins": ["transform-runtime"],
+  "comments": false
+}
