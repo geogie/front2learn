@@ -19,7 +19,9 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
+# 使用：
+  npm install  
+  npm start
 # 解释：
   index.html项目入口，<router-view>引用控件，<script引用script，id=“app”入口  
   main.js:路由表，注册vue，挂载，重定向  
