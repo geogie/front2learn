@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- 起步：声明式渲染、条件与循环、处理用户输入 -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+  <!-- <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script> -->
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <!-- 和vue中的 #app 对应，id 对应 vue 中的 #name，显示变量内容-->
+  <div id="app">
+    <p>{{ message }}</p>
+  </div>
+  <!-- v-bind指令，指令带有前缀 v-，以表示它们是 Vue.js 提供的特殊属性, 鼠标停留在这个文本上后显示message -->
+  <div id="app-2">
+    <span v-bind:title="message">
+      Hover your mouse over me for a few seconds to see my dynamically title!
+    </span>
+  </div>
+  <!-- 条件与循环 v-if boolean类型 可见和不可见  -->
+  <div id="app-3">
+    <p v-if="seen">Now you see me</p>
+  </div>
+  <!-- v-for 遍历数组todos 为 todo -->
+  <div id="app-4">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+
+  <div id="app-5">
+    <p>{{ message }}</p>
+  </div>
+
+
+  <script>
+    // 定义变量message，绑定插入文本内容
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue.js!'
+      }
+    })
+    //  定义变量message，app2和控制台中的app2.message=“haha”修改的名字对应
+    var app2 = new Vue({
+      el: '#app-2',
+      data: {
+        message: "You loaded this page on " + new Date()
+      }
+    })
+    // 定义一个boolean变量
+    var app3 = new Vue({
+      el: '#app-3',
+      data: {
+        seen: true
+      }
+    })
+    // 定义数组
+    var app4 = new Vue({
+      el: '#app-4',
+      data: {
+        todos: [
+          // 数组中单个item为text
+          {
+            text: 'Learn JavaScript'
+          },
+          {
+            text: 'Learn Vue'
+          },
+          {
+            text: 'Learn something awesome'
+          }
+        ]
+      }
+    })
+
+    var app5 = new Vue({
+      el: '#app-5',
+      data: {
+        message: 'Hello Vue.js!'
+      },
+      methods: {
+        reverseMessage: function() {
+          this.message = this.message.split('').reverse().join('')
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
