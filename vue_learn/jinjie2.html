@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vue Render函数</title>
+  <!-- <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script> -->
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <h1>
+    <a name="hello-world" href="#hello-world">
+      Hello world!
+    </a>
+  </h1>
+  <anchored-heading :level="1">Hello world!</anchored-heading>
+
+  <script>
+  Vue.component('anchored-heading', {
+    render: function (createElement) {
+      return createElement(
+        'h' + this.level,   // tag name 标签名称
+        this.$slots.default // 子组件中的阵列
+      )
+    },
+    props: {
+      level: {
+        type: Number,
+        required: true
+      }
+    }
+  })
+  </script>
+</body>
+
+</html>

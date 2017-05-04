@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Vue实例：构造器、属性与方法、实例生命周期 -->
+<html>
+<!-- 每个Vue实例代理其data对象里所有属性 -->
+<head>
+  <meta charset="utf-8">
+  <title>Vue实例</title>
+  <!-- <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script> -->
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+
+  <script>
+// 生命周期钩子：created钩子在实例被创建后掉用，this指向Vue实例
+    var vm = new Vue({
+      data: { a: 1 },
+      created: function(){
+        console.log('a is: '+this.a);
+      }
+    })
+
+  </script>
+</body>
+
+</html>

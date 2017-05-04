@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Class 与 Style绑定 -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Class 与 Style绑定</title>
+  <!-- <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script> -->
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <div v-bind:class="{ active: isActive }"></div>
+
+  <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">
+  </div>
+
+  <div class="static active"></div>
+
+  <div v-bind:class="classObject"></div>
+  <h1 v-if="ok">Yes</h1>
+  <h1 v-else>No</h1>
+
+  <!-- <template v-if="ok">
+  <h1>Title</h1>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  </template> -->
+
+  <div v-if="Math.random() > 0.5">
+    Sorry
+  </div>
+  <div v-else>
+    Not sorry
+  </div>
+
+  <div v-if="type === 'A'">
+    A
+  </div>
+  <div v-else-if="type === 'B'">
+    B
+  </div>
+  <div v-else-if="type === 'C'">
+    C
+  </div>
+  <div v-else>
+    Not A/B/C
+  </div>
+
+  <!-- <template v-if="loginType === 'username'">
+  <label>Username</label>
+  <input placeholder="Enter your username">
+</template>
+<template v-else>
+  <label>Email</label>
+  <input placeholder="Enter your email address">
+</template> -->
+
+
+  <script>
+    var vm = new Vue({
+      data: {
+        classObject: {
+          active: true,
+          'text-danger': false
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

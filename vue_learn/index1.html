@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- 起步：声明式渲染、条件与循环、处理用户输入 -->
+<!-- 介绍：声明式渲染、条件与循环、处理用户输入、应用组件构建(应用)、与自定义元素的关系 -->
 <html>
 
 <head>
   <meta charset="utf-8">
-  <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+  <title>Vue介绍</title>
   <!-- <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script> -->
   <script src="https://unpkg.com/vue"></script>
 </head>
@@ -32,10 +32,23 @@
       </li>
     </ol>
   </div>
-
+  <!-- v-on监听事件 -->
   <div id="app-5">
     <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
   </div>
+  <!-- 输入框,v-model：表单输入和应用状态双向数据绑定 -->
+  <div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+  </div>
+
+  <div id="app-7">
+    <ol>
+      <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+    </ol>
+  </div>
+
 
 
   <script>
@@ -78,7 +91,7 @@
         ]
       }
     })
-
+    // 处理用户输入：倒叙输入
     var app5 = new Vue({
       el: '#app-5',
       data: {
@@ -90,6 +103,36 @@
         }
       }
     })
+    // 变量
+    var app6 = new Vue({
+      el: '#app-6',
+      data: {
+        message: 'Hello Vue!'
+      }
+    })
+    // 组件构建（应用）,能够接受一个属性字段，v-bind将todo传到每个重复的组件中，子元素通过 props 接口实现了与父亲元素很好的解耦。
+    // 在一个大型应用中，为了使得开发过程可控，有必要将应用整体分割成一个个的组件
+    Vue.component('todo-item', {
+      props: ['todo'],
+      template: '<li>{{ todo.text }}</li>'
+    })
+    var app7 = new Vue({
+      el: '#app-7',
+      data: {
+        groceryList: [{
+            text: 'Vegetables'
+          },
+          {
+            text: 'Cheese'
+          },
+          {
+            text: 'Whatever else humans are supposed to eat'
+          }
+        ]
+      }
+    })
+    // Vue.js组件类似于自定义元素，是web组件规范一部分，
+    // 特性：组件数据流、自定义事件系统、动态的、带特效的组件替换。
   </script>
 </body>
 
