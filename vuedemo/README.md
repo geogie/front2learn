@@ -1,30 +1,11 @@
 # vuedemo
+简单demo  
+让webpack+vue-cil项目不再自动打开浏览器：  
+打开 /build/dev-server.js 文件 末尾，代码如下：  
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+// when env is testing, don't need open it  
+if (process.env.NODE_ENV !== 'testing') {  
+  opn(uri)  
+}  
+只需要把这段代码注释，即可。
+[参考](http://blog.csdn.net/fungleo/article/details/53171052)
