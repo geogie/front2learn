@@ -7,20 +7,20 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-module.exports = {
+module.exports = { //webpack基本配置
   entry: {
     app: './src/main.js'
   },
   output: {
-    path: config.build.assetsRoot,
+    path: config.build.assetsRoot, // 设置文件路径
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
-    alias: {
+    extensions: ['.js', '.vue', '.json'], // 请求的模块自动补全文件的后缀
+    alias: { // 一些别名通过别名缩短字符串的长度
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src')
     }
