@@ -1,3 +1,4 @@
+// POST 方法
 var express = require('express');
 var app = express();
 
@@ -8,7 +9,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/index.html', function (req, res) {
-  console.log(__dirname + "/" + "index.html" )
+  console.log("index.html" )
    res.sendFile( __dirname + "/" + "index.html" );
 })
 
