@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>编程式的导航、命名路由</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Hello App!</h1>
+    <p>
+      <router-link :to="{ name: 'user', params: { userId: 123 }}">User</router-link>
+    </p>
+    <router-view></router-view>
+  </div>
+
+  <script>
+  const User = {
+    template: `<div>User {{ $route.params.userId }}</div>`
+  }
+
+  const router = new VueRouter({
+  routes: [
+    {
+      path: '/user/:userId',
+      name: 'user',
+      component: User
+    }
+  ]
+})
+    const app = new Vue({
+      router
+    }).$mount('#app')
+// 编程式的导航
+    // router.push({ name: 'user', params: { userId: 123 }})
+
+    // 现在，应用已经启动了！
+  </script>
+</body>
+
+</html>
