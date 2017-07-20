@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+
+  <!-- <embed height="50" width="100" src="musics/music.mp3"> -->
+  <!-- <embed height="50" width="100" src="musics/music.mp3"> -->
+  <!-- <audio controls>
+    <source src="musics/music.mp3" type="audio/mpeg">
+    <source src="musics/music.mp3" type="audio/ogg">
+  </audio> -->
+  <p>乱舞苍穹</p>
+  <audio controls>
+    <source src="musics/music.mp3" type="audio/mpeg">
+    <source src="musics/music.mp3" type="audio/ogg">
+    <embed height="50" width="100" src="musics/music.mp3">
+  </audio>
+
+  <p>吉他独奏</p>
+  <audio controls>
+    <source src="http://m7.music.126.net/20170719143843/f69eb229de265746819fbc626e2cfa37/ymusic/d107/9279/6132/35977087a8aae227911437f6055b42f1.mp3" type="audio/mpeg">
+    <source src="http://m7.music.126.net/20170719143843/f69eb229de265746819fbc626e2cfa37/ymusic/d107/9279/6132/35977087a8aae227911437f6055b42f1.mp3" type="audio/ogg">
+    <embed height="50" width="100" src="musics/music.mp3">
+  </audio>
+
+  <p>重新认识我</p>
+  <audio controls>
+      <source src="http://m8.music.126.net/20170719163516/745565b01bf31bda4eed768d9ac34415/ymusic/d33e/9a33/e6bc/0d733c1fb2999293fcf1d9da93ab15b3.mp3" type="audio/mpeg">
+      <source src="http://m8.music.126.net/20170719163516/745565b01bf31bda4eed768d9ac34415/ymusic/d33e/9a33/e6bc/0d733c1fb2999293fcf1d9da93ab15b3.mp3" type="audio/ogg">
+      <embed height="50" width="100" src="musics/music.mp3">
+    </audio>
+
+  <!-- <p><a href="musics/music.mp3">Play mp3</a></p>
+  <p><a href="musics/music.mp3">Play wav</a></p>
+  <script src="https://mediaplayer.yahoo.com/latest"></script> -->
+
+  <!-- <p>
+  <a href="musics/music.mp3">乱舞苍穹</a>
+  </p> -->
+
+  <!-- <p>
+  <video width="320" height="240" controls>
+  <source src="movies/movie.mp4" type="video/mp4">
+  <source src="movies/movie.ogg" type="video/ogg">
+</video>
+</p> -->
+
+  <div style="text-align:center">
+    <button onclick="playPause()">播放/暂停</button>
+    <button onclick="makeBig()">放大</button>
+    <button onclick="makeSmall()">缩小</button>
+    <button onclick="makeNormal()">普通</button>
+    <br>
+    <video id="video1" width="420">
+    <source src="movies/movie.mp4" type="video/mp4">
+    <source src="movies/movie.mp4" type="video/ogg">
+    您的浏览器不支持 HTML5 video 标签。
+  </video>
+  </div>
+
+  <script>
+    var myVideo = document.getElementById("video1");
+
+    function playPause() {
+      if (myVideo.paused)
+        myVideo.play();
+      else
+        myVideo.pause();
+    }
+
+    function makeBig() {
+      myVideo.width = 560;
+    }
+
+    function makeSmall() {
+      myVideo.width = 320;
+    }
+
+    function makeNormal() {
+      myVideo.width = 420;
+    }
+  </script>
+
+  <p> 如果你无法听到该音频，那么可能你的电脑或浏览器不支持该文件格式。</p>
+  <p>或者你没有打开扬声器。</p>
+
+</body>
+
+</html>
