@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Input, Menu} from "element-react";
+import RegisterDialog from "./RegisterDialog";
+import LoginDialog from "./LoginDialog";
 
 export default class Header extends Component {
 
@@ -7,6 +9,8 @@ export default class Header extends Component {
     super(props);
     this.state = {
       searchInput: '',
+      registerDialog: false,
+      loginDialog: false,
     };
   }
 
@@ -17,6 +21,18 @@ export default class Header extends Component {
   handleIconClick = () => {
     console.log('handleIconClick', this.state.searchInput);
   };
+
+  handleRegisterDialogClose = () => {
+  return () => {
+    this.setState({registerDialog: false});
+  }
+};
+
+handleLoginDialogClose = () => {
+  return () => {
+    this.setState({loginDialog: false});
+  }
+};
 
   render() {
     return (
@@ -46,12 +62,18 @@ export default class Header extends Component {
               </Menu.Item>
               <Menu.Item index="8">
                 <Button type="text" className="login-btn"
-                        onClick={ () => console.log('登录') }>登录</Button>
-                <Button type="text" onClick={ () => console.log('注册') }>注册</Button>
+                        onClick={ () => this.setState({loginDialog: true}) }>登录</Button>
+                <Button type="text" onClick={ () => this.setState({registerDialog: true}) }>注册</Button>
               </Menu.Item>
             </Menu>
           </div>
         </div>
+      <RegisterDialog visible={this.state.registerDialog} onClose={this.handleRegisterDialogClose()}
+                      registerActions={this.props.registerActions} users={this.props.users}
+      />
+      <LoginDialog visible={this.state.loginDialog} onClose={this.handleLoginDialogClose()}
+                   loginActions={this.props.loginActions} auth={this.props.auth}
+      />
       </header>
     )
   }
