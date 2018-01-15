@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--锚点：页面内跳转
+
+    定位:
+    背景透明度变化: hover-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS3 太极图</title>
+    <style>
+      *{margin: 0; padding: 0;}
+      .listbox{width: 500px; height: 375px; border: 1px solid #333333;
+        margin: 100px;  position: relative;}
+      .listbox ul li{width: 30px; height: 30px; background: rgba(0,0,0,0.5);
+       float: left; list-style: none; text-align: center; line-height: 30px;
+       color: #fff; margin: 0 2px;}
+      .listbox ul li a{color: #fff; text-decoration: none;}
+      .listbox ul{position: absolute; right: 20px;bottom: 10px}
+      .listbox ul li:hover{background: rgba(0,0,0,0.8);}
+      .listbox .listpic{ overflow: hidden; width: 500px; height: 375px}
+    </style>
+  </head>
+  <body>
+    <div class="listbox">
+      <div class="listpic">
+        <img src="timg1.jpg" width="500px" height="375px" id="pic1"/>
+        <img src="timg2.jpg" width="500px" height="375px" id="pic2"/>
+        <img src="timg3.jpg" width="500px" height="375px" id="pic3"/>
+        <img src="timg4.jpg" width="500px" height="375px" id="pic4"/>
+      </div>
+      <ul>
+        <li><a href="#pic1">1</a></li>
+        <li><a href="#pic2">2</a></li>
+        <li><a href="#pic3">3</a></li>
+        <li><a href="#pic4">4</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
