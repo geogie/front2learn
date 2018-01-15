@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS3动画实现loading效果</title>
+    <style type="text/css">
+      *{margin: 0; padding: 0;}
+      .circlebox{width: 40px; height: 40px;  margin: 100px; position: absolute;}
+      .circlebox p{width: 12px; height: 12px; background: red; border-radius: 50%; position: absolute; animation: move 1.5s infinite linear;}
+      .circlebox p:nth-of-type(1){left: 0; top: 0;}
+      .circlebox p:nth-of-type(2){right: 0; top: 0;}
+      .circlebox p:nth-of-type(3){right: 0; bottom: 0;}
+      .circlebox p:nth-of-type(4){left: 0; bottom: 0;}
+      /* 第二个circlebox顺时针旋转45度 */
+      .circlebox:nth-of-type(2){transform: rotate(45deg);}
+      /* 缩放动画 */
+      @keyframes move {
+        0%{transform: scale(0);}
+        50%{transform: scale(1);}
+        100%{transform: scale(0);}
+      }
+      /* 每个点延迟缩放，符号解决问题：实现逆时针，防止第一次进来点逗留 */
+      .circlebox:nth-of-type(1) p:nth-of-type(1){animation-delay: -0.1s}
+      .circlebox:nth-of-type(2) p:nth-of-type(1){animation-delay: -0.3s}
+      .circlebox:nth-of-type(1) p:nth-of-type(2){animation-delay: -0.5s}
+      .circlebox:nth-of-type(2) p:nth-of-type(2){animation-delay: -0.7s}
+      .circlebox:nth-of-type(1) p:nth-of-type(3){animation-delay: -0.9s}
+      .circlebox:nth-of-type(2) p:nth-of-type(3){animation-delay: -1.1s}
+      .circlebox:nth-of-type(1) p:nth-of-type(4){animation-delay: -1.2s}
+      .circlebox:nth-of-type(2) p:nth-of-type(4){animation-delay: -1.4s}
+    </style>
+  </head>
+  <body>
+    <div class="circlebox">
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <div class="circlebox">
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </body>
+</html>
