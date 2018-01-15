@@ -9,3 +9,5 @@ rotatecube.html:旋转的立方体
 taiji.html: 太极图旋转
 
 switchpic.html: 图片切换效果
+
+foldfan.html:折扇
