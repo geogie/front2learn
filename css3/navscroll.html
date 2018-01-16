@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<!--图标平移变色：图标的整合实现  -->
+  <head>
+    <meta charset="utf-8">
+    <title>CSS3 导航图标滚动</title>
+    <style type="text/css">
+      *{margin: 0;padding: 0;}
+      /* 盒子大小 */
+      .nav{width: 1000px;height: 40px;border: 1px solid #cccccc;margin: 100px;}
+      /* 去掉点 每个矩形大小 靠左排列 虚线*/
+      .nav ul li{width: 99px;height: 40px;float:left;list-style: none;
+       border-right: 1px dashed #cccccc;}
+      /* 去掉下划线 整张素材图片设置大小 */
+      .nav ul li a{text-decoration: none;font-size: 12px;color: #909090;
+       line-height: 40px;background: url(nav1.jpg)no-repeat;display: block;
+       background-size: 54px 328px; padding-left: 30px;transition: all 1s;}
+       /* 在整张素材图片中取出需要的放到合适位置 */
+      .nav ul li:nth-of-type(1) a{background-position: -5px -2px;}
+      .nav ul li:nth-of-type(2) a{background-position: -5px -45px;}
+      .nav ul li:nth-of-type(3) a{background-position: -5px -92px;}
+      .nav ul li:nth-of-type(4) a{background-position: -5px -138px;}
+      .nav ul li:nth-of-type(5) a{background-position: -5px -182px;}
+      /* 由于我ps技能有限只能随便换效果了，哈哈，要用临近的顺序对的，否则效果很乱 */
+      .nav ul li:nth-of-type(1):hover a{color: green;background-position: -5px -45px;}
+      .nav ul li:nth-of-type(2):hover a{color: green;background-position: -5px -92px;}
+      .nav ul li:nth-of-type(3):hover a{color: green;background-position: -5px -138px;}
+      .nav ul li:nth-of-type(4):hover a{color: green;background-position: -5px -182px;}
+      .nav ul li:nth-of-type(5):hover a{color: green;background-position: -5px -138px;}
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li><a href="#">我的主页</a></li>
+        <li><a href="#">新闻头条</a></li>
+        <li><a href="#">电视剧</a></li>
+        <li><a href="#">最新电影</a></li>
+        <li><a href="#">小说大全</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
