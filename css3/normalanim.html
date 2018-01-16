@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 定位 过渡动画 transform -->
+    <meta charset="utf-8">
+    <title>CSS3 常见动画效果过度效果</title>
+    <style>
+      *{margin: 0;padding: 0;}
+      /* 区域 */
+      .box{width: 377px; height: 280px; margin: 50px auto;
+       position: relative;overflow: hidden;}
+       /* 蒙层色 */
+      .box .bg{width: 377px; height: 280px; background: black;opacity: 0;
+       position: absolute;top: 0; transition: 0.5s linear;}
+      .box:hover .bg{opacity: 0.5}
+      /* 标题 */
+      .box h3{position: absolute; width: 100%;text-align: center;
+       top: -40px;font-size: 28px;color: #2ebcff;transition: 0.5s linear;}
+      .box:hover h3{top:35px;}
+      /* 圆 */
+      .box .circle{width: 90px; height: 90px;border-radius: 50%; background: #2ebcff;opacity: 0.8;
+       position: absolute; top: 100px;left: -90px;transition: 0.5s linear;}
+      .box:hover .circle{left: 150px;}
+      /* 搜索 */
+      .box .search{width: 50px; height: 50px;position: absolute; top: 120px;
+       right: -50px;transition: 0.5s linear;z-index: 8;}
+      .box:hover .search{right: 155px;}
+      /* 背景图片 */
+      .box img:nth-of-type(1){transition: 0.5s linear;}
+      .box:hover img:nth-of-type(1){transform: scale(1.2);}
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="timg1.jpg"/>
+      <p class="bg"></p>
+      <h3>商业咨询策划</h3>
+      <div class="circle"></div>
+      <img class="search" src="search.png"/>
+    </div>
+  </body>
+</html>
