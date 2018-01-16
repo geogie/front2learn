@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--锚点：css实现点击效果变样式，单页面进行跳转
+        定位：
+        边框三角形：
+        当前活动窗口控制：:target
+        -->
+    <meta charset="utf-8">
+    <title>CSS3 垂直手风琴</title>
+    <style>
+      *{margin: 0;padding: 0;}
+      .listbox{width: 500px; height: 800px;margin: 50px auto;}
+      .listbox .list a{display: block;height: 35px;background: linear-gradient(#cecece,#8f8f8f);
+       border-radius: 5px;padding-left: 12px; text-decoration: none;color: #424242;line-height: 35px;}
+      .listbox .list p{height: 0;overflow: auto;padding-left: 10px;margin: 5px 0;
+       transition: 0.5s;}
+      .listbox .list{position: relative;}
+      /* 倒三角 */
+      .listbox .list span{width: 0; height: 0;border-left: 5px solid rgba(0,0,0,0);
+       border-right: 5px solid transparent;border-top: 5px solid white;
+       border-bottom: 5px solid transparent;position: absolute;top: 15px;right: 15px;}
+       /* 活动触发 */
+      .listbox .list:target p{height: 100px;}
+      /* 群组选择器 */
+      .listbox .list a:hover,.listbox .list:target a{background: linear-gradient(#6bb2ff,#2288dd);
+       color: #fff;}
+      .listbox .list:target span{border-top: 5px solid transparent;border-left: 5px solid white;
+       right: 10px;}
+    </style>
+  </head>
+  <body>
+    <div class="listbox">
+      <div class="list" id="listone">
+        <a href="#listone">Brand</a>
+        <span></span>
+        <p>
+          央视网消息：深圳，作为中国改革开放成功的典范，有其特殊的历史地位和使命。
+　　1980年8月26日，全国人大常委会批准颁布了《广东省经济特区条例》，深圳经济特区正式宣告成立。为了使经济特区的政策得到具体落实，1986年2月22日广东省六届人大通过了《深圳经济特区与内地之间人员往来管理规定》，同年3月，深圳市人民政府出台了《深圳经济特区与内地之间人员往来管理规定实施细则》，进一步规范特区管理线的日常管理工作。1986年全面实施对深圳经济特区管理线依法管理。
+　　1月15日，国务院批复同意撤销深圳经济特区管理线。至此，这条东起深圳盐田区梅沙背仔角西至宝安区南头安乐，被称为“二线”的深圳经济特区管理线，在设立30余年后将成为历史。
+　　那么当初为什么要设“二线”呢？这是由于管理的需要。据媒体报道，这条将深圳分成关内、关外的“二线”建立之初全长84.6公里，沿线路面用花岗岩石板铺成，路北侧用高达3米的铁丝网隔离。国家决定对特区进口货物、物品给予特殊的关税优惠，设立管理线可以防止走私。此外，设立管理线还有减轻特区内治安压力和一线管理压力的诸多考虑。
+        </p>
+      </div>
+
+      <div class="list" id="listtwo">
+        <a href="#listtwo">Brand</a>
+        <span></span>
+        <p>
+          央视网消息：深圳，作为中国改革开放成功的典范，有其特殊的历史地位和使命。
+　　1980年8月26日，全国人大常委会批准颁布了《广东省经济特区条例》，深圳经济特区正式宣告成立。为了使经济特区的政策得到具体落实，1986年2月22日广东省六届人大通过了《深圳经济特区与内地之间人员往来管理规定》，同年3月，深圳市人民政府出台了《深圳经济特区与内地之间人员往来管理规定实施细则》，进一步规范特区管理线的日常管理工作。1986年全面实施对深圳经济特区管理线依法管理。
+　　1月15日，国务院批复同意撤销深圳经济特区管理线。至此，这条东起深圳盐田区梅沙背仔角西至宝安区南头安乐，被称为“二线”的深圳经济特区管理线，在设立30余年后将成为历史。
+　　那么当初为什么要设“二线”呢？这是由于管理的需要。据媒体报道，这条将深圳分成关内、关外的“二线”建立之初全长84.6公里，沿线路面用花岗岩石板铺成，路北侧用高达3米的铁丝网隔离。国家决定对特区进口货物、物品给予特殊的关税优惠，设立管理线可以防止走私。此外，设立管理线还有减轻特区内治安压力和一线管理压力的诸多考虑。
+        </p>
+      </div>
+
+      <div class="list" id="listthree">
+        <a href="#listthree">Brand</a>
+        <span></span>
+        <p>
+          央视网消息：深圳，作为中国改革开放成功的典范，有其特殊的历史地位和使命。
+　　1980年8月26日，全国人大常委会批准颁布了《广东省经济特区条例》，深圳经济特区正式宣告成立。为了使经济特区的政策得到具体落实，1986年2月22日广东省六届人大通过了《深圳经济特区与内地之间人员往来管理规定》，同年3月，深圳市人民政府出台了《深圳经济特区与内地之间人员往来管理规定实施细则》，进一步规范特区管理线的日常管理工作。1986年全面实施对深圳经济特区管理线依法管理。
+　　1月15日，国务院批复同意撤销深圳经济特区管理线。至此，这条东起深圳盐田区梅沙背仔角西至宝安区南头安乐，被称为“二线”的深圳经济特区管理线，在设立30余年后将成为历史。
+　　那么当初为什么要设“二线”呢？这是由于管理的需要。据媒体报道，这条将深圳分成关内、关外的“二线”建立之初全长84.6公里，沿线路面用花岗岩石板铺成，路北侧用高达3米的铁丝网隔离。国家决定对特区进口货物、物品给予特殊的关税优惠，设立管理线可以防止走私。此外，设立管理线还有减轻特区内治安压力和一线管理压力的诸多考虑。
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

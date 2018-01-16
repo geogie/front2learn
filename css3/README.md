@@ -13,3 +13,5 @@ switchpic.html: 图片切换效果
 foldfan.html:折扇
 
 normalanim.html：常见动画过渡效果
+
+verticalorgan.html：垂直手风琴
