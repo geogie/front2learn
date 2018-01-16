@@ -17,3 +17,5 @@ normalanim.html：常见动画过渡效果
 verticalorgan.html：垂直手风琴
 
 navscroll.html: 导航图标平移变色，用图标整合来实现（整图切割）
+
+popwindowcenter.html:弹窗居中几种方法实现

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>CSS3 网页弹窗剧中方法</title>
+    <style type="text/css">
+      *{margin: 0;padding: 0}
+      .box{width: 300px;height: 300px;border: 1px solid red;margin: 100px;}
+      /*
+      第一种方法：
+      定位+margin
+       */
+      /* .box p{width: 200px;height: 200px;background: green;position: fixed;top:50%;
+       left: 50%;margin-top: -100px;margin-left: -100px;} */
+      /* 第二种：css3新加的
+         定位+transform
+         缺点：低版本浏览器不兼容
+       */
+      /* .box p{width: 200px;height: 200px;background: green;position: fixed;top:50%;
+        left: 50%;transform: translate(-100px,-100px);} */
+      /* 第三种：
+      技巧，原理屁，记住就行
+       */
+      /* p{width: 200px;height: 200px;background: green;position: fixed;top: 0;
+      left: 0;right: 0;bottom: 0;margin: auto;} */
+      /* 第四种：弹性盒 */
+      html,body{height: 100%;width: 100%;}
+      body{display: flex;justify-content: center;align-items: center;height: 100%;}
+      p{width: 200px;height: 200px;background: green;}
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box"> -->
+      <p></p>
+    <!-- </div> -->
+  </body>
+</html>
