@@ -1,0 +1,62 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: none}
+
+/* top */
+#top{height: 34px;background: url(../img/top-bg.jpg) repeat-x;text-align: right;}
+#top p{width: 950px; margin: 0 auto;line-height: 34px;font-size: 18px;color: #333333;}
+#top p img{height: 20px; vertical-align: top;padding-top: 7px;padding-right: 10px;}
+
+/* nav */
+#nav{width: 950px;height: 100px;margin: 0 auto;}
+#nav .logo{float: left;padding-top: 42px;padding-right: 91px;}
+#nav .logo img{width: 195px;height: 42px;}
+#nav ul{float: left;}
+#nav ul li{float: left;font-size: 12px; color: #1d1c1c;padding-top: 48px;}
+#nav ul li a{color: #666;width: 89px;float: left;text-align: center;
+  padding-bottom: 16px;}
+#nav ul li a:hover{border-bottom: 3px solid #000; color: #000;}
+
+/* banner */
+#banner img{width: 100%;display: block;}
+
+#main{width: 950px;margin: 0 auto;}
+/* link */
+#link{height: 223px;overflow: hidden;}
+#link ul li a img{width: 110px;height: 110px;}
+#link ul{padding: 44px 35px;width: 962px;}
+#link ul li{float: left;margin-right: 82px;}
+
+/* case */
+#case{height: 446px;}
+#case h3{height: 50px; background: url(../img/title-bg.jpg) repeat-x;
+  background-size: 2px 50px;text-align:center;}
+#case h3 img{width: 121px;height: 50px;margin:auto}
+#case ul li a img{width: 170px;height: 300px;}
+#case ul{width: 970px;padding-top: 38px;}
+#case ul li{float: left;margin-right: 20px;}
+
+/* about */
+#about{height: 250px;}
+#about h3,#process h3{height: 50px; background: url(../img/title-bg.jpg) repeat-x;
+  background-size: 2px 50px;text-align:center;font-size: 22px;line-height: 32px;}
+#about h3 b,#process h3 b{color: #f00;}
+#about h3 strong,#process h3 strong{color: #fff;}
+#about h3 span,#process h3 span{color: #30353a;display: block;font-size: 12px;background: #fff;
+ width: 76px;margin: 0 auto;line-height: 18px}
+#about h4{font-size: 18px;font-weight: normal;text-align: center;padding-top: 30px;}
+#about p{text-align: center;font-size: 13px;line-height: 27px;}
+#about p a{color: #666666;}
+
+/* process */
+#process{height: 245px;}
+#process p{text-align: center;padding-top: 42px;font-size: 12px;color: #666666;}
+#process p img{width: 24px;height: 22px;display: inline;vertical-align: middle;margin: 0 10px;}
+
+
+/* bottom */
+#bottom{height: 89px;background: #eaeaea;border-top: 1px solid #b4b4b4;
+ text-align: center;font-size: 12px;line-height: 22px;padding-top: 28px;}
+#bottom a{color: #000000;}
+#bottom span{padding: 0 5px;}

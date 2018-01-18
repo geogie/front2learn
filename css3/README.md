@@ -21,3 +21,5 @@ navscroll.html: 导航图标平移变色，用图标整合来实现（整图切�
 popwindowcenter.html:弹窗居中几种方法实现
 
 pointpicbig.html:定位实现图片放大，解决高度塌陷
+
+zhimei简单模仿致美官网首页。
