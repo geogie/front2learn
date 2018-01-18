@@ -27,3 +27,5 @@ zhimei简单模仿致美官网首页。
 scalerotate.html:缩放旋转动画
 
 scalerotate1.html:旋转放大
+
+rotate.html:翻盖效果
