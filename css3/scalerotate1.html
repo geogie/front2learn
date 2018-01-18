@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 定位：根据父元素定位，父元素要设置定位，相对定位。不然根据浏览器定位 利用css3的缩放属性transform中的scale和rotate-->
+    <meta charset="utf-8">
+    <title>CSS3 旋转缩放效果2</title>
+    <style type="text/css">
+      *{margin: 0;padding: 0;}
+      div{width: 200px;height: 200px;background: #333;color: #fff;
+        font-size: 50px;text-align: center;line-height: 200px;
+        border-radius: 50%;margin: 0 auto;position: relative;}
+      p{width: 160px;height: 160px;background: url(timg1.jpg);
+        border: 20px solid rgba(255,255,255,0.5);border-radius: 50%;
+        background-origin: border-box;position: absolute;top: 0;transition: 1s;opacity: 1;}
+      div:hover p{transform: scale(2,2) rotate(360deg);opacity: 0}
+    </style>
+  </head>
+  <body>
+    <div id="">
+      文字
+      <p>
+
+      </p>
+    </div>
+  </body>
+</html>

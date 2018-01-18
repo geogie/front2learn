@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 自元素根据父元素定位，父设置相对定位，上下显示z-index显示层级
+        transfor缩放 旋转之间用空格隔开-->
+    <meta charset="utf-8">
+    <title>CSS3 旋转缩放效果</title>
+    <style type="text/css">
+    *{margin: 0;padding: 0;}
+    div{width: 200px;height: 200px;border-radius: 50%;
+      margin: 0 auto;position: relative;}
+    p{width: 160px;height: 160px;background: url(timg1.jpg);border-radius: 50%;
+      border: 20px solid rgba(255,255,255,0.5);background-origin: border-box;
+      position: absolute;z-index: 1;transition: 1s;}
+    h1{width: 200px;height: 200px;background: #333;color: white;text-align: center;
+     line-height: 200px;border-radius: 50%;position: absolute;transform: scale(0,0) rotate(0deg);
+     transition: 1s;}
+    div:hover p{transform: scale(0,0) rotate(360deg);}
+    div:hover h1{transform: scale(1,1) rotate(360deg);}
+    </style>
+  </head>
+  <body>
+    <div>
+      <p></p>
+      <h1>文字</h1>
+    </div>
+  </body>
+</html>
